@@ -282,4 +282,31 @@ public class Users {
     public void setUpdatedTime(Date updatedTime) {
         this.updatedTime = updatedTime;
     }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id='" + id + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", realname='" + realname + '\'' +
+                ", face='" + face + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", email='" + email + '\'' +
+                ", sex=" + sex +
+                ", birthday=" + birthday +
+                ", createdTime=" + createdTime +
+                ", updatedTime=" + updatedTime +
+                '}';
+    }
+
+    /**
+     * 获取返回给前端的数据
+     * @return
+     */
+    public void toSalfData() {
+        this.password = null;
+        this.realname = null;
+    }
 }
